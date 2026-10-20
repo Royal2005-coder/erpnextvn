@@ -91,7 +91,7 @@ def setup_company_vietnam(args: dict) -> None:
     try:
         create_tax_templates(company)
     except Exception as exc:
-        frappe.log_error(f"create_tax_templates failed for {company}: {exc}")
+        frappe.log_error(title="erpnextvn: create_tax_templates failed", message=f"{company}: {exc}")
 
     # System-wide Vietnam defaults
     frappe.db.set_single_value("System Settings", "date_format", "dd/mm/yyyy")
