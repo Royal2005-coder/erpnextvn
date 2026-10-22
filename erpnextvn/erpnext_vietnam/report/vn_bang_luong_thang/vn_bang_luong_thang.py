@@ -68,8 +68,8 @@ def _get_data(filters: dict[str, Any]) -> list[dict]:
     rows = frappe.db.sql(
         f"""
         SELECT
-            ss.employee, ss.employee_name, ss.department, ss.payment_days,
-            ss.base, ss.gross_pay, ss.net_pay, ss.total_deduction,
+            ss.name, ss.employee, ss.employee_name, ss.department, ss.payment_days,
+            ss.tlc_effective_base AS base, ss.gross_pay, ss.net_pay, ss.total_deduction,
             ss.vn_insurance_employee, ss.vn_pit_amount, ss.vn_taxable_income
         FROM `tabSalary Slip` ss
         WHERE {where}
@@ -81,12 +81,13 @@ def _get_data(filters: dict[str, Any]) -> list[dict]:
 
     data: list[dict] = []
     for r in rows:
-        bhxh = _component_total(r.employee, r.name if "name" in r else None, "BHXH (NLĐ 8%)")
-        bhyt = _component_total(r.employee, r.name if "name" in r else None, "BHYT (NLĐ 1.5%)")
-        bhtn = _component_total(r.employee, r.name if "name" in r else None, "BHTN (NLĐ 1%)")
+        bhxh = _component_total(r.employee, r.name, "BHXH (NLĐ 8%)")
+        bhyt = _component_total(r.employee, r.name, "BHYT (NLĐ 1.5%)")
+        bhtn = _component_total(r.employee, r.name, "BHTN (NLĐ 1%)")
 
         data.append(
             {
+                "name": r.name,
                 "employee": r.employee,
                 "employee_name": r.employee_name,
                 "department": r.department or "",
