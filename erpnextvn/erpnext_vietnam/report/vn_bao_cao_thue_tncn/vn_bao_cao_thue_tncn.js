@@ -1,4 +1,4 @@
-frappe.query_reports["VN Báo Cáo Thuế TNCN"] = {
+frappe.query_reports["VN Bao Cao Thue TNCN"] = {
     filters: [
         {
             fieldname: "company",

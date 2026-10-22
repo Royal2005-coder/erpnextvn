@@ -11,11 +11,11 @@
     "modified": "2025-01-01 00:00:00",
     "modified_by": "Administrator",
     "module": "ERPNext Vietnam",
-    "name": "VN Bảng Lương Tháng",
+    "name": "VN Bang Luong Thang",
     "owner": "Administrator",
     "prepared_report": 0,
     "ref_doctype": "Salary Slip",
-    "report_name": "VN Bảng Lương Tháng",
+    "report_name": "VN Bang Luong Thang",
     "report_type": "Script Report",
     "roles": [
         {"role": "HR User"},

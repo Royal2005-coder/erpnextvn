@@ -7,10 +7,10 @@
     "modified": "2025-01-01 00:00:00",
     "modified_by": "Administrator",
     "module": "ERPNext Vietnam",
-    "name": "VN Sổ Cái",
+    "name": "VN So Cai",
     "owner": "Administrator",
     "ref_doctype": "GL Entry",
-    "report_name": "VN Sổ Cái",
+    "report_name": "VN So Cai",
     "report_type": "Script Report",
     "roles": [
         {"role": "Accounts User"},

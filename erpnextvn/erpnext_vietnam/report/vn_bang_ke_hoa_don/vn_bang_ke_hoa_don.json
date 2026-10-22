@@ -7,10 +7,10 @@
     "modified": "2025-01-01 00:00:00",
     "modified_by": "Administrator",
     "module": "ERPNext Vietnam",
-    "name": "VN Bảng Kê Hóa Đơn",
+    "name": "VN Bang Ke Hoa Don",
     "owner": "Administrator",
     "ref_doctype": "Sales Invoice",
-    "report_name": "VN Bảng Kê Hóa Đơn",
+    "report_name": "VN Bang Ke Hoa Don",
     "report_type": "Script Report",
     "roles": [
         {"role": "Accounts User"},

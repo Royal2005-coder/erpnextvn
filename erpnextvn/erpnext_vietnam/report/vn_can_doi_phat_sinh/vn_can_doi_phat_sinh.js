@@ -1,4 +1,4 @@
-frappe.query_reports["VN Cân Đối Phát Sinh"] = {
+frappe.query_reports["VN Can Doi Phat Sinh"] = {
     filters: [
         {
             fieldname: "company",
